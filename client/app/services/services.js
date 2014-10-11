@@ -26,7 +26,7 @@ angular.module('shortly.services', [])
     getLinks: getLinks,
     addLink: addLink
   };
-});
+})
 
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
