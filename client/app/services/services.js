@@ -12,11 +12,11 @@ angular.module('shortly.services', [])
   };
 
   var addLink = function(link){
-    console.log("Inside Link Factory addLink",link);
+    var sendLink = {url: link};
     return $http({
       method: 'POST',
       url: '/api/links',
-      data: link
+      data: sendLink
     })
     .then(function (resp) {
       return resp.data;
@@ -38,7 +38,7 @@ angular.module('shortly.services', [])
   // after you signin/signup open devtools, click resources,
   // then localStorage and you'll see your token from the server
   var signin = function (user) {
-    console.log("Signin");
+    console.log("Signin", user);
     return $http({
       method: 'POST',
       url: '/api/users/signin',

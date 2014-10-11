@@ -6,11 +6,11 @@ angular.module('shortly.links', [])
 
     Links.getLinks()
     .then(function(data){
-      console.log("Inside Links.getLinks()", data);
       $scope.data.links = data;
+      console.log("Inside Links.getLinks()", $scope.data);
     });
   };
 
-  
+
   $scope.getLinks();
 });
