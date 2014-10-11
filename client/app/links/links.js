@@ -1,7 +1,5 @@
 angular.module('shortly.links', [])
 
-// .config(function($routeProvider))
-
 .controller('LinksController', function ($scope, Links) {
   $scope.data = {};
   $scope.getLinks = function(){
@@ -12,6 +10,7 @@ angular.module('shortly.links', [])
       $scope.data.links = data;
     });
   };
-  console.log("foo");
+
+  
   $scope.getLinks();
 });
