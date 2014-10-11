@@ -6,7 +6,7 @@
   <!-- display all currently available links -->
   <ul>
     <li ng-repeat="link in data.links">
-      <a href="{{link.url}}">Title: {{link.title}}, URL: {{link.url}}, Visits: {{link.visits}}</a>
+      <a href="{{base_url}}/api/links/{{link.code}}" ng-click=""><b>Title:</b> {{link.title}}, <b>Shortened URL:</b> {{link.base_url}}/{{link.code}}, <b>Visits:</b> {{link.visits}}</a>
     </li>
   </ul>
 

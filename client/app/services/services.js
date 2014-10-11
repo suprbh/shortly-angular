@@ -1,5 +1,21 @@
 angular.module('shortly.services', [])
 
+
+// .directive('password', function () {
+//   return {
+//     template: '<input type="password" ng-model='user.password' name="pswd" minlength="3" ng-maxlength="8" required="true">',
+//     restrict: 'E',
+//     scope: true,
+//     link: function (scope, element, attrs) {
+//       scope.$watch('pswd', function () {
+//         if (scope.pswd.length > 3){
+
+//         }
+//       });
+//     }
+//   };
+// })
+
 .factory('Links', function ($http) {
   var getLinks = function(){
     return $http({
