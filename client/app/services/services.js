@@ -12,6 +12,7 @@ angular.module('shortly.services', [])
   };
 
   var addLink = function(link){
+    console.log("Inside Link Factory addLink",link);
     return $http({
       method: 'POST',
       url: '/api/links',
@@ -58,6 +59,9 @@ angular.module('shortly.services', [])
     })
     .then(function (resp) {
       return resp.data.token;
+    })
+   .catch(function (error) {
+      console.error(error);
     });
   };
 
